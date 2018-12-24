@@ -9,7 +9,21 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<link rel="icon" type="image/png" href="images/logo.png" />
 	</head>
-	<body class="landing is-preload">
+<body class="landing is-preload">
+<script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAenXio8zyXXiLsbMUhajM2757IJhum-cw",
+    authDomain: "geopoint-7a688.firebaseapp.com",
+    databaseURL: "https://geopoint-7a688.firebaseio.com",
+    projectId: "geopoint-7a688",
+    storageBucket: "geopoint-7a688.appspot.com",
+    messagingSenderId: "728432659744"
+  };
+  firebase.initializeApp(config);
+</script>
+	
 <style>
 .responsivelogo {
   width: 50%;
