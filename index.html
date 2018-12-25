@@ -36,11 +36,11 @@
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
         if (email.length < 4) {
-          alert('Please enter an email address.');
+          alert('Veuillez entrer une adresse Email.');
           return;
         }
         if (password.length < 4) {
-          alert('Please enter a password.');
+          alert('Veuillez entrer un mot de passe.');
           return;
         }
         // Sign in with email and pass.
@@ -51,7 +51,7 @@
           var errorMessage = error.message;
           // [START_EXCLUDE]
           if (errorCode === 'auth/wrong-password') {
-            alert('Wrong password.');
+            alert('Mauvais mot de passe.');
           } else {
             alert(errorMessage);
           }
@@ -70,11 +70,11 @@
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
       if (email.length < 4) {
-        alert('Please enter an email address.');
+        alert('Veuillez entrer une adresse Email.');
         return;
       }
       if (password.length < 4) {
-        alert('Please enter a password.');
+        alert('Veuillez entrer un mot de passe.');
         return;
       }
       // Sign in with email and pass.
@@ -85,7 +85,7 @@
         var errorMessage = error.message;
         // [START_EXCLUDE]
         if (errorCode == 'auth/weak-password') {
-          alert('The password is too weak.');
+          alert('Le mot de passe est trop faible.');
         } else {
           alert(errorMessage);
         }
@@ -102,7 +102,7 @@
       firebase.auth().currentUser.sendEmailVerification().then(function() {
         // Email Verification sent!
         // [START_EXCLUDE]
-        alert('Email Verification Sent!');
+        alert('Email de verification envoyé !');
         // [END_EXCLUDE]
       });
       // [END sendemailverification]
@@ -113,7 +113,7 @@
       firebase.auth().sendPasswordResetEmail(email).then(function() {
         // Password Reset Email Sent!
         // [START_EXCLUDE]
-        alert('Password Reset Email Sent!');
+        alert('Email de réinitialisation du mot de passe envoyé.');
         // [END_EXCLUDE]
       }).catch(function(error) {
         // Handle Errors here.
