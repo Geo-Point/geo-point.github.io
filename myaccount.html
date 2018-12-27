@@ -55,11 +55,11 @@
         var email = document.getElementById('email').value;
         var password = document.getElementById('password').value;
         if (email.length < 4) {
-          alert('Please enter an email address.');
+          alert('Veuillez entrer une adresse email.');
           return;
         }
         if (password.length < 4) {
-          alert('Please enter a password.');
+          alert('Veuillez entrer un mot de passe.');
           return;
         }
         // Sign in with email and pass.
@@ -70,7 +70,7 @@
           var errorMessage = error.message;
           // [START_EXCLUDE]
           if (errorCode === 'auth/wrong-password') {
-            alert('Wrong password.');
+            alert('Mauvais mot de passe.');
           } else {
             alert(errorMessage);
           }
@@ -89,11 +89,11 @@
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
       if (email.length < 4) {
-        alert('Please enter an email address.');
+        alert('Veuillez entrer une adresse email.');
         return;
       }
       if (password.length < 4) {
-        alert('Please enter a password.');
+        alert('Veuillez entrer un mot de passe.');
         return;
       }
       // Sign in with email and pass.
@@ -104,7 +104,7 @@
         var errorMessage = error.message;
         // [START_EXCLUDE]
         if (errorCode == 'auth/weak-password') {
-          alert('The password is too weak.');
+          alert('Le mot de passe est trop faible.');
         } else {
           alert(errorMessage);
         }
@@ -121,7 +121,7 @@
       firebase.auth().currentUser.sendEmailVerification().then(function() {
         // Email Verification sent!
         // [START_EXCLUDE]
-        alert('Email Verification Sent!');
+        alert('Email de Verification envoyé !');
         // [END_EXCLUDE]
       });
       // [END sendemailverification]
@@ -132,7 +132,7 @@
       firebase.auth().sendPasswordResetEmail(email).then(function() {
         // Password Reset Email Sent!
         // [START_EXCLUDE]
-        alert('Password Reset Email Sent!');
+        alert('Email de réinitialisation du mot de passe envoyé !');
         // [END_EXCLUDE]
       }).catch(function(error) {
         // Handle Errors here.
@@ -171,18 +171,19 @@
           var uid = user.uid;
           var providerData = user.providerData;
           // [START_EXCLUDE]
-          document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
-          document.getElementById('quickstart-sign-in').textContent = 'Sign out';
+          document.getElementById('quickstart-sign-in-status').textContent = 'connecté';
+          document.getElementById('quickstart-sign-in').textContent = 'Se connecter';
           document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
           if (!emailVerified) {
             document.getElementById('quickstart-verify-email').disabled = false;
+	    document.getElementById('quickstart-verify-email').style.display = "none";
           }
           // [END_EXCLUDE]
         } else {
           // User is signed out.
           // [START_EXCLUDE]
-          document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
-          document.getElementById('quickstart-sign-in').textContent = 'Sign in';
+          document.getElementById('quickstart-sign-in-status').textContent = 'déconnecté';
+          document.getElementById('quickstart-sign-in').textContent = 'Se connecter';
           document.getElementById('quickstart-account-details').textContent = 'null';
           // [END_EXCLUDE]
         }
