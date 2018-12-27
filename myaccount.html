@@ -171,17 +171,18 @@
           var uid = user.uid;
           var providerData = user.providerData;
           // [START_EXCLUDE]
-          document.getElementById('quickstart-sign-in-status').textContent = 'Connecté';
+          document.getElementById('quickstart-sign-in-status').textContent = 'connecté';
           document.getElementById('quickstart-sign-in').textContent = 'Déconnexion';
           document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
           if (!emailVerified) {
             document.getElementById('quickstart-verify-email').disabled = false;
+            mdl-button mdl-js-button mdl-button--raised.style.display = 'none';
           }
           // [END_EXCLUDE]
         } else {
           // User is signed out.
           // [START_EXCLUDE]
-          document.getElementById('quickstart-sign-in-status').textContent = 'Déconnecté';
+          document.getElementById('quickstart-sign-in-status').textContent = 'déconnecté';
           document.getElementById('quickstart-sign-in').textContent = 'Connexion';
           document.getElementById('quickstart-account-details').textContent = 'null';
           // [END_EXCLUDE]
