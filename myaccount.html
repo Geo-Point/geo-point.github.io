@@ -211,9 +211,11 @@
 								<li class="special">
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
+										 <span id="quickstart-sign-in-status">Déconnecté</span>
 										<ul>
 											<li><a href="index.html">Home</a></li>
 											<li><a href="carte.html">Carte</a></li>
+											
 										</ul>
 									</div>
 								</li>
@@ -248,20 +250,17 @@
           <input class="mdl-textfield__input" style="display:inline;width:auto;" type="password" id="password" name="password" placeholder="Mot de passe"/>
           <br/><br/>
           <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Se connecter</button>
-          &nbsp;&nbsp;&nbsp;
+		<h1>OU</h1>
           <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-up" name="signup">S'inscrire</button>
           &nbsp;&nbsp;&nbsp;
-          <button class="mdl-button mdl-js-button mdl-button--raised" disabled id="quickstart-verify-email" name="verify-email">Envoyer un e-mail de vérification</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised" disabled id="quickstart-verify-email" name="verify-email">Envoyer un e-mail<br>de vérification</button>
           &nbsp;&nbsp;&nbsp;
-          <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-password-reset" name="verify-email">Envoyer l'email de réinitialisation du mot de passe</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-password-reset" name="verify-email">Envoyer l'email<br>de réinitialisation du mot de passe</button>
 
        
-          <div class="quickstart-user-details-container">
-            Statut de connexion à Firebase: <code><span id="quickstart-sign-in-status">Inconnu</span></code>
-          <div>Valeur de l'authentification Firebase: <code>Utilisateur Actuel</code></div>
-            <pre><code id="quickstart-account-details">Déconnecté</code></pre>
-          </div>
-        </div>
+           <span id="quickstart-sign-in-status">Déconnecté</span>
+         
+     
       </div>
 
     </div>
