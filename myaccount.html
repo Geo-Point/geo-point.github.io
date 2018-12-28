@@ -176,7 +176,7 @@
           document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
           if (!emailVerified) {
             document.getElementById('quickstart-verify-email').disabled = false;
-	    document.getElementById('quickstart-verify-email').style.display = "none";
+	    document.getElementById('verifmail').style.display = "none";
           }
           // [END_EXCLUDE]
         } else {
@@ -214,10 +214,10 @@
 									<div id="menu">
 										 
 										<ul>
-											<li>Vous êtes <span id="quickstart-sign-in-status">Déconnecté</span></li>
-											<li></li>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="carte.html">Carte</a></li>
+					<li><a href="index.html">Home</a></li>
+					<li>Vous êtes <span id="quickstart-sign-in-status">déconnecté</span></li>
+					<li><button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Se connecter</button></li>
+					<li><a href="map.html">Carte</a></li>
 											
 										</ul>
 									</div>
@@ -249,15 +249,15 @@
           <p>Entrez un email et un mot de passe ci-dessous et connectez-vous à un compte existant ou inscrivez-vous.</p>
 
           <input class="mdl-textfield__input" style="display:inline;width:auto;" type="text" id="email" name="email" placeholder="Email"/>
-          &nbsp;&nbsp;&nbsp;
+          <br><br>
           <input class="mdl-textfield__input" style="display:inline;width:auto;" type="password" id="password" name="password" placeholder="Mot de passe"/>
-          <br/><br/>
+          <br><br>
           <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Se connecter</button>
 		<h1>OU</h1>
           <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-up" name="signup">S'inscrire</button>
-          &nbsp;&nbsp;&nbsp;
-          <button class="mdl-button mdl-js-button mdl-button--raised" disabled id="quickstart-verify-email" name="verify-email">Vérifier votre email</button>
-          &nbsp;&nbsp;&nbsp;
+        <br>
+         <div id="verifmail"> <button class="mdl-button mdl-js-button mdl-button--raised" disabled id="quickstart-verify-email" name="verify-email">Vérifier votre email</button> 
+        <br></div>
           <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-password-reset" name="verify-email">Modifier le mot de passe</button>
 
          
