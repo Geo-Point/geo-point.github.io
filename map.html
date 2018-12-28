@@ -177,7 +177,10 @@
           if (!emailVerified) {
             document.getElementById('quickstart-verify-email').disabled = false;
 	    document.getElementById('quickstart-verify-email').style.display = "none";
-          }
+	    document.getElementById('map').style.display = "block";
+          } else {
+		    document.getElementById('map').style.display = "none";
+	  }
           // [END_EXCLUDE]
         } else {
           // User is signed out.
@@ -201,7 +204,12 @@
       initApp();
     };
   </script>
-		<!-- Page Wrapper -->
+	<style>
+		.responsive {
+  width: 10%;
+  height: auto;
+}
+		</style>	<!-- Page Wrapper -->
 			<div id="page-wrapper">
 
 				<!-- Header -->
@@ -215,8 +223,7 @@
 										 
 										<ul>
 					<li><a href="index.html">Home</a></li>
-          <li>Vous êtes <span id="quickstart-sign-in-status">déconnecté</span></li>
-					<li><button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Se connecter</button></li>
+                                        <li><img src="/images/male-user.png" class="responsive"> Vous êtes <span id="quickstart-sign-in-status">déconnecté</span></li>
 					<li><a href="myaccount.html">Mon Compte</a></li>
 											
 										</ul>
@@ -239,6 +246,7 @@
 								</header>
 						<!-- CARTE -->
             
+								<div id="map">Mini Map</div>
             
             
 							</div>
