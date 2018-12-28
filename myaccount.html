@@ -176,8 +176,10 @@
           document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
           if (!emailVerified) {
             document.getElementById('quickstart-verify-email').disabled = false;
-	    document.getElementById('verifmail').style.display = "none";
-          }
+	    document.getElementById('verifmail').style.display = "block";
+          } else {
+		     document.getElementById('verifmail').style.display = "none";
+	  }
           // [END_EXCLUDE]
         } else {
           // User is signed out.
