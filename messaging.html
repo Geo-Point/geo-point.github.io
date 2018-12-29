@@ -8,10 +8,8 @@
 
 
 
-</head>
-<body>
-  <button id="notify">Notification</button>
-<script>function initNotify(){  // Onload du body
+<script>
+function initNotify(){
 	var btn = document.getElementById('notify');
 	if(window.Notification){
 		Notification.requestPermission(function (status) {
@@ -28,15 +26,22 @@
 	else{
 		btn.disabled = true;
 		btn.onclick = undefined;
-		alert('Votre navigateur ne supporte pas cette fonctionnalité !');
+		alert('Votre navigateur est trop ancien pour supporter cette fonctionnalité !');
 	}
 }
 function notify(){
-	var n = new Notification('Bienvenue', {
+	var n = new Notification('GeoPoint', {
 		body: 'Affichage du message de notification.\nCliquer sur ce message pour le faire disparaitre.',
 		icon: '/images/logo.png'
 	});
 }
-  </script>
+	</script>
+</head>
+<body onload="initNotify()">
+	
+		<button id="notify">Afficher la notification</button>
+
+	
 </body>
+
 </html>
