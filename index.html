@@ -8,6 +8,7 @@
 	     
 		<script src="/index.js" defer></script>
 		<link rel="manifest" href="/manifest.webmanifest">
+ 
   <!-- Disable tap highlight on IE -->
   		<meta name="msapplication-tap-highlight" content="no">
 
@@ -34,18 +35,7 @@
 <body class="landing is-preload">
 	
 <script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyAenXio8zyXXiLsbMUhajM2757IJhum-cw",
-    authDomain: "geopoint-7a688.firebaseapp.com",
-    databaseURL: "https://geopoint-7a688.firebaseio.com",
-    projectId: "geopoint-7a688",
-    storageBucket: "geopoint-7a688.appspot.com",
-    messagingSenderId: "728432659744"
-  };
-  firebase.initializeApp(config);
-</script>
+<script src="/firebase.js"></script>
 	 
 	
 <style>
@@ -67,10 +57,11 @@
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
-											<li><a href="index.html">Home</a></li>
+											
+											<!-- <li><a href="index.html">Home</a></li>
 											<li><a href="myaccount.html">Mon compte</a></li>
 											
- 
+ 											-->
 										</ul>
 									</div>
 								</li>
@@ -104,72 +95,15 @@
 						</div>
 					</section>
 
-				<!-- Two 
-					<section id="two" class="wrapper style3 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Sign Up<h2/>
-								
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
-							</header>
-						</div>
-						
-					</section>
-
-				Three
-					<section id="three" class="wrapper style3 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Connexion</h2>
-								</header>
-							<main class="mdl-layout__content mdl-color--grey-100">
-    <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
-
-     
-      <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
-        <div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
-        
-        </div>
-        <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-          <p>Entrez un email et un mot de passe ci-dessous et connectez-vous à un compte existant ou inscrivez-vous.</p>
-
-          <input class="mdl-textfield__input" style="display:inline;width:auto;" type="text" id="email" name="email" placeholder="Email"/>
-          &nbsp;&nbsp;&nbsp;
-          <input class="mdl-textfield__input" style="display:inline;width:auto;" type="password" id="password" name="password" placeholder="Mot de passe"/>
-          <br/><br/>
-          <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Se connecter</button>
-          &nbsp;&nbsp;&nbsp;
-          <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-up" name="signup">S'inscrire</button>
-          &nbsp;&nbsp;&nbsp;
-          <button class="mdl-button mdl-js-button mdl-button--raised" disabled id="quickstart-verify-email" name="verify-email">Envoyer un e-mail de vérification</button>
-          &nbsp;&nbsp;&nbsp;
-          <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-password-reset" name="verify-email">Envoyer l'email de réinitialisation du mot de passe</button>
-
-       
-          <div class="quickstart-user-details-container">
-            Statut de connexion à Firebase: <code><span id="quickstart-sign-in-status">Inconnu</span></code>
-          <div>Valeur de l'authentification Firebase: <code>Utilisateur Actuel</code></div>
-            <pre><code id="quickstart-account-details">Déconnecté</code></pre>
-          </div>
-        </div>
-      </div>
-
-    </div>
-</main> 
-						</div>
-					</section>
-
 				
 -->
 				<!-- Footer -->
 					<footer id="footer">
 						<ul class="icons">
-							<h1>Partager</h1>
-							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-							
-							<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+							<h2>Partager</h2>
+							<li><a href="https%3A%2F%2Ftwitter.com%2Fintent%2Ftweet%2F%3Furl%3Dhttps%3A%2F%2Fgeo-point.github.io%2F%26text%3DCherchez+et+trouvez+les+balise+GeoPoint" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https%3A%2F%2Fwww.facebook.com%2Fsharer%2Fsharer.php%3Fu%3Dhttps%3A%2F%2Fgeo-point.github.io" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="mailto:?subject=GeoPoint&body=https%3A%2F%2Fgeo-point.github.io" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
 						</ul>
 						<button class="add-button">Ajouter à l'écran d'accueil</button>
 						
