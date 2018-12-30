@@ -1,12 +1,13 @@
 {
-  "background_color": "white",
+  "background_color": "#2e3842",
   "description": "CHERCHEZ ET TROUVEZ LES BALISES GEOPOINT CACHÉES DANS LES LIEUX LES PLUS IMPROBABLES",
   "display": "fullscreen",
   "icons": [
     {
       "src": "images/icon.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "background_color": "white",
     }
   ],
   "name": "GeoPoint",
