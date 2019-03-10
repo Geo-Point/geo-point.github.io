@@ -54,6 +54,7 @@
     function handleSignUp() {
       var email = document.getElementById('email').value;
       var password = document.getElementById('password').value;
+      var score = "0";
       if (email.length < 4) {
         alert('Veuillez entrer une adresse email.');
         return;
@@ -64,7 +65,7 @@
       }
       // Sign in with email and pass.
       // [START createwithemail]
-      firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+      firebase.auth().createUserWithEmailAndPassword(email, password, score).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
@@ -133,19 +134,21 @@
           var email = user.email;
           var emailVerified = user.emailVerified;
           var photoURL = user.photoURL;
+	  var score = user.score;
           var isAnonymous = user.isAnonymous;
           var uid = user.uid;
           var providerData = user.providerData;
           // [START_EXCLUDE]
           document.getElementById('quickstart-sign-in-status').textContent = 'connecté';
           document.getElementById('quickstart-sign-in').textContent = 'Se déconnecter';
-          document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
+          document.getElementById('quickstart-account-details').textContent = 'Vous avez '+ score + 'point(s)';
           if (!emailVerified) {
             document.getElementById('quickstart-verify-email').disabled = false;
 	    document.getElementById('verifmail').style.display = "block";
 	
           } else {
 		     document.getElementById('verifmail').style.display = "none";
+		     document.getElementById('quickstart-sign-up').style.display = "none";
 	  }
           // [END_EXCLUDE]
         } else {
@@ -153,7 +156,7 @@
           // [START_EXCLUDE]
           document.getElementById('quickstart-sign-in-status').textContent = 'déconnecté';
           document.getElementById('quickstart-sign-in').textContent = 'Se connecter';
-          document.getElementById('quickstart-account-details').textContent = 'null';
+          document.getElementById('quickstart-account-details').textContent = "Vous n'êtes pas connecté";
           // [END_EXCLUDE]
         }
         // [START_EXCLUDE silent]
