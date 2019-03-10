@@ -113,8 +113,10 @@
         
           <p>Entrez un email et un mot de passe ci-dessous et connectez-vous à un compte existant ou inscrivez-vous.</p>
 
-          <input class="mdl-textfield__input" style="display:inline;width:auto;" type="text" id="email" name="email" placeholder="Email"/>
-          <br><br>
+          <input class="mdl-textfield__input" style="display:inline;width:auto;" type="text" id="pseudo" name="pseudo" placeholder="Pseudo"/>
+        <br>
+	  <input class="mdl-textfield__input" style="display:inline;width:auto;" type="text" id="email" name="email" placeholder="Email"/>
+	<br>
           <input class="mdl-textfield__input" style="display:inline;width:auto;" type="password" id="password" name="password" placeholder="Mot de passe"/>
           <br><br>
           <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Se connecter</button>
@@ -127,13 +129,6 @@
 
          <br>
      <code id="quickstart-account-details">Vous êtes déconnecté</code>
-	<!--<script>	var userId = firebase.auth().currentUser.uid;
-return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
-  var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
-  // ...
-});
-		 document.getElementById('data').textContent = username;
-		</script>-->
 		
       
 
