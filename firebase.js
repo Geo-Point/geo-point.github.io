@@ -149,6 +149,7 @@
           } else {
 		     document.getElementById('verifmail').style.display = "none";
 		     document.getElementById('quickstart-sign-up').style.display = "none";
+		  document.getElementById('quickstart-account-details').style.display = "block";
 	  }
           // [END_EXCLUDE]
         } else {
