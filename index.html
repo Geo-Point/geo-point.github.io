@@ -34,8 +34,8 @@
 	</head>
 <body class="landing is-preload">
 	
-<script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js"></script>
-<script src="/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.1/firebase.js" defer></script>
+<script src="/firebase.js" defer></script>
 	 
 	
 <style>
@@ -64,10 +64,10 @@
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
-											<li><button><a href="#">Home</a></button></li>
+											<li><a href="#"><button>Home</button></a></li>
 											<li><img src="/images/male-user.png" class="responsive"> Vous êtes <span id="quickstart-sign-in-status">déconnecté</span></li>
-											<li><button><a href="#account">Mon compte</a></button></li>
-											<li><button><a href="#map">Carte</a></button></li>
+											<li><a href="#account"><button>Mon compte</button></a></li>
+											<li><a href="#map"><button>Carte</button></a></li>
 											
 									</div>
 								</li>
@@ -127,7 +127,7 @@
           <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-password-reset" name="verify-email">Modifier le mot de passe</button>
 
          
-     <code id="quickstart-account-details">null</code>
+     <code id="quickstart-account-details">Vous êtes Déconnecté</code>
 	<!--<script>	var userId = firebase.auth().currentUser.uid;
 return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
   var username = (snapshot.val() && snapshot.val().username) || 'Anonymous';
@@ -162,13 +162,13 @@ return firebase.database().ref('/users/' + userId).once('value').then(function(s
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<script src="assets/js/jquery.min.js" defer></script>
+			<script src="assets/js/jquery.scrollex.min.js" defer></script>
+			<script src="assets/js/jquery.scrolly.min.js" defer></script>
+			<script src="assets/js/browser.min.js" defer></script>
+			<script src="assets/js/breakpoints.min.js" defer></script>
+			<script src="assets/js/util.js" defer></script>
+			<script src="assets/js/main.js" defer></script>
                       
 	</body>
 </html>
