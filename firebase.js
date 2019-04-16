@@ -1,8 +1,7 @@
- // Initialize Firebase
-  var config = {
+ var config = {
     apiKey: "AIzaSyAenXio8zyXXiLsbMUhajM2757IJhum-cw",
     authDomain: "geopoint-7a688.firebaseapp.com",
-    databaseURL: "https://geopoint-7a688.firebaseio.com",
+    databaseURL: "s://geopoint-7a688.firebaseio.com",
     projectId: "geopoint-7a688",
     storageBucket: "geopoint-7a688.appspot.com",
     messagingSenderId: "728432659744"
