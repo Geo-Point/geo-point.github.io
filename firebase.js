@@ -1,13 +1,14 @@
- var config = {
-    apiKey: "AIzaSyAenXio8zyXXiLsbMUhajM2757IJhum-cw",
-    authDomain: "geopoint-7a688.firebaseapp.com",
-    databaseURL: "s://geopoint-7a688.firebaseio.com",
-    projectId: "geopoint-7a688",
-    storageBucket: "geopoint-7a688.appspot.com",
-    messagingSenderId: "728432659744"
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCJ-pTw-yWMM9_NAdN80hl7H2e_ilWC8Rg",
+    authDomain: "geopoint-app.firebaseapp.com",
+    databaseURL: "https://geopoint-app.firebaseio.com",
+    projectId: "geopoint-app",
+    storageBucket: "geopoint-app.appspot.com",
+    messagingSenderId: "515109453712"
   };
   firebase.initializeApp(config);
-  
+
    /**
      * Handles the sign in button press.
      */
@@ -96,7 +97,7 @@
       firebase.auth().currentUser.sendEmailVerification().then(function() {
         // Email Verification sent!
         // [START_EXCLUDE]
-        alert('Email de Verification envoyé !');
+        alert('Veuillez verifier votre adresse mail pour valider votre compte');
         // [END_EXCLUDE]
       });
       // [END sendemailverification]
